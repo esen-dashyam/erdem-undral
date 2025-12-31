@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx tsc && cp index.html dist/ && cp -r assets dist/ && cp -r pictures dist/"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +14,8 @@
   "devDependencies": {
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
-    "typescript": "^5.4.5"
+    "@vitejs/plugin-react": "^5.1.2",
+    "typescript": "^5.4.5",
+    "vite": "^7.3.0"
   }
 }
