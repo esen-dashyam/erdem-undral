@@ -23,16 +23,16 @@ As we were having those genuinely great conversations that day, I realized you h
             <p className={`text-center ${theme.textSecondary} mb-8`}>A message has arrived.</p>
 
             <div
-                className="w-full max-w-2xl cursor-pointer transition-transform duration-1000"
+                className={`w-full max-w-2xl transition-transform duration-300 ${isOpened ? '' : 'cursor-pointer'}`}
                 style={{ transformStyle: 'preserve-3d', transform: isOpened ? 'rotateX(0deg)' : 'rotateX(75deg)' }}
-                onClick={() => setIsOpened(!isOpened)}
+                onClick={isOpened ? undefined : () => setIsOpened(true)}
                 role="button"
                 aria-expanded={isOpened}
                 tabIndex={0}
-                onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && setIsOpened(!isOpened)}
+                onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && setIsOpened(true)}
             >
-                <div className={`relative w-full min-h-[400px] p-8 md:p-12 rounded-lg shadow-2xl transition-all duration-1000 ${theme.secondary} ${isOpened ? 'bg-opacity-80' : 'bg-opacity-100'}`}>
-                    <div className={`absolute inset-0 flex items-center justify-center transition-opacity duration-500 ${isOpened ? 'opacity-0' : 'opacity-100'}`}>
+                <div className={`relative w-full min-h-[320px] md:min-h-[420px] p-4 sm:p-6 md:p-10 rounded-lg shadow-2xl transition-all duration-300 ${theme.secondary} ${isOpened ? 'bg-opacity-80' : 'bg-opacity-100'}`}>
+                    <div className={`absolute inset-0 flex items-center justify-center transition-opacity duration-200 ${isOpened ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
                         <div className="text-center">
                             <div className={`w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center border-4 ${theme.accent} ${theme.primary}`}>
                                 <span className={`text-3xl font-bold ${theme.textAccent}`}>E</span>
@@ -41,10 +41,21 @@ As we were having those genuinely great conversations that day, I realized you h
                         </div>
                     </div>
 
-                    <div className={`transition-opacity duration-700 delay-500 ${isOpened ? 'opacity-100' : 'opacity-0'}`}>
-                        <pre className={`whitespace-pre-wrap font-serif text-lg ${theme.textPrimary}`}>
-                            {letterContent}
-                        </pre>
+                    <div className={`transition-opacity duration-300 delay-100 ${isOpened ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+                        <div className="flex justify-end mb-3">
+                            <button
+                                type="button"
+                                onClick={() => setIsOpened(false)}
+                                className={`px-3 py-1 rounded-md ${theme.primary} ${theme.textAccent} border ${theme.accent}`}
+                            >
+                                Close
+                            </button>
+                        </div>
+                        <div className="max-h-[60vh] md:max-h-[65vh] overflow-y-auto pr-2">
+                            <pre className={`whitespace-pre-wrap font-serif text-base md:text-lg leading-relaxed ${theme.textPrimary}`}>
+                                {letterContent}
+                            </pre>
+                        </div>
                     </div>
                 </div>
             </div>
