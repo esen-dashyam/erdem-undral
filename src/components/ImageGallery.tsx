@@ -3,21 +3,18 @@ import React, { useState } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import Modal from './Modal';
 
-const placeholderImages = [
-    "https://images.unsplash.com/photo-1577912889823-a54b491a3365?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1512163143279-df8323050d62?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1605744344320-a3883b65b3e3?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1576073663324-72117f291242?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1544890225-2fde04a04d32?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1513299228243-f6491a483315?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1606964910932-9d699659489c?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-157333555 संभवतः-488483a55e?q=80&w=800&auto=format&fit=crop",
-];
+import whatsappImg from '../pictures/WhatsApp Image 2026-01-01 at 6.54.00 PM.jpeg';
+import catanImg from '../pictures/catan.jpeg';
+import imageCopyImg from '../pictures/image copy.png';
+import imageImg from '../pictures/image.png';
+import savingImg from '../pictures/saving_me_from_drowning.jpg';
+
+const galleryImages = [whatsappImg, catanImg, imageCopyImg, imageImg, savingImg];
 
 
 const ImageGallery = () => {
     const { theme } = useTheme();
-    const [images] = useState<string[]>(placeholderImages);
+    const [images] = useState<string[]>(galleryImages);
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
     return (
@@ -28,7 +25,7 @@ const ImageGallery = () => {
             <p className={`text-center ${theme.textSecondary} mb-8`}>A collection of festive moments to inspire holiday cheer.</p>
 
             {images.length > 0 ? (
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full">
                     {images.map((src, index) => (
                         <div
                             key={index}

@@ -7,15 +7,12 @@ const LetterToErdemUndral = () => {
     const [isOpened, setIsOpened] = useState(false);
 
     const letterContent = `
-To the one who seeks,
 
-The path you walk is woven from threads of moments past and dreams yet to come. Do not mistake the shadows for the end of the road; they are but proof that a light shines nearby.
+Тэр нэг өдөр чи яг л Солонгос киноны дүр шиг гоёмсог, хээнцэр харагдаж билээ. Чамайг анх харахдаа тэрхүү загварлаг, чамин төрхөнд чинь шууд л татагдсан. Гэхдээ дотроо 'Нөгөө л нэг beauty with no brains, аягүй бол fashion, gender studies энэ тэр сонирхдог typical охин байх' гэж бодож яваж байтал many months had passed and we started our first genuine, real conversations, I realized that never in my life had I been so wrong about someone. There is a quiet wisdom in you that flows naturally, touching everything you do and guiding you forward and upward with grace and strength. You are truly worthy of your name. Our first conversation regarding love—where we were both opposing Ochiroo's ideas and ideology—was when our synergy started. That was the beginning of my дурлах процесс and the start of my admiration for you. 
 
-Each challenge is a mountain, and from its peak, you will see how far you've come. The winds may howl, but they also carry the seeds of new forests. Trust the strength in your roots and the courage in your heart.
-
-The journey is the destination. Walk it with purpose and kindness.
-
-- E.U.
+As we were having those genuinely great conversations that day, I realized you have such an amazing mind. Чиний тэр гоц ухаан, юмсыг үзэх өргөн цар хүрээ, сониуч зан чинь намайг хүлээж байгаагүйгээр минь гайхшруулж, би зөвхөн үзэсгэлэнт төрхөнд чинь төдийгүй, чиний тэр ер бусын оюун бодолд өөрийн эрхгүй уусан шингэж, зүрх минь хэдийнэ чамд дурлаж орхисныг олон сарын турш анзааралгүй явж иржээ. Гэхдээ тэр бүгдээс илүүтэйгээр your sense of humor and your smile. Чамайг инээх болгонд зүрхэн дотор минь ямар нэгэн гэрэл асах шиг болж, эргэн тойрны бүх муу зүйлс хоромхон зуурт замхран алга болож and I feel at ease. Especially your talk of magic inspired me to seek something better in life. Although you may not think it’s a big deal, during the days when I had lost all hope, the simple desire to see you smile again gave me strength. It motivated me to find a job faster and opened my eyes to a new perspective on life. Although you and I are not a couple, and I'm not so foolish as to fail to realize that you're not interested in me—even if you were single without a boyfriend—your very existence has inspired me to work harder. Through that motivation, I've gotten to experience so many wonderful things, all thanks to you: traveling to Turkey, journeying across the world, and meeting diverse people from all walks of life. You've given me the courage to become a better, stronger man. So, no matter what happens between us, I will always be grateful for the light you've brought into my life.
+ 
+Хэзээ нэгэн өдөр чиний гараар агуу зүйлс бүтэж байгааг харах завшаантай болно гэдэгт би итгэлтэй байна. Чи мэс заслын мэргэжлээрээ дэлхийн хэмжээний эмч болохыг (world-class surgeon) нүдээр харах юмсаан гэж би дотроо хүсэж. Гэхдээ чи яг тэр замыг сонгоогүй ч байсан ямар ч сонголт хийсэн чи зөв замаа олоод, өөрийнхөө нэрний утгыг үргэлж үнэ цэнтэй хадгалж явах хүн гэдэгт би бүрэн итгэлтэй байгаа. Чиний ирээдүй ямар байхыг би таамаглаж чадахгүй ч, чи хаана ч явсан, юу ч хийсэн “Эрдэм Ундрал” гэдэг нэрээ яг л өөрийнхөөрөө гэрэлтүүлж явахыг харна гэдэгт би эргэлзэхгүй байна. Тэр өдөр ирэхэд би зүгээр л холыг харж, инээмсэглээд “Тиймээ, тэр миний мэддэг Эрдэм Ундрал минь” гэж хэлнэ дээ. Чиний зам үргэлж гэрэлтэй, өндөрт мандан бадарч байх болтугай.
     `;
 
     return (
